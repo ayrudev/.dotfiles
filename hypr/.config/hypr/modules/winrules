@@ -1,0 +1,35 @@
+# Zen #
+windowrule = pin, class:zen, title:Picture-in-Picture
+windowrule = float, class:zen, title:Picture-in-Picture
+windowrule = noinitialfocus, class:zen, title:Picture-in-Picture
+windowrule = size 640 360, class:zen, title:Picture-in-Picture
+windowrule = move 1912 0, class:zen, title:Picture-in-Picture
+windowrule = opacity 0.888888885, class:zen, title:Picture-in-Picture
+windowrule = noborder, class:zen, title:Picture-in-Picture
+windowrule = noblur, class:zen, title:Picture-in-Picture
+windowrule = nodim, class:zen, title:Picture-in-Picture
+windowrule = maxsize 1280 720, class:zen, title:Picture-in-Picture
+windowrule = minsize 544 306, class:zen, title:Picture-in-Picture
+windowrule = pin, class:zen, title:Picture-in-Picture
+
+windowrule = float, class:zen, title:Library
+windowrule = center, class:zen, title:Library
+
+# Steam #
+windowrule = float, class:steam, title:Friends List
+windowrule = center 1, class:steam, title:Friends List
+windowrule = float, class:steam, title:Steam Settings
+windowrule = center, class:steam, title:Steam Settings
+
+# Flameshot #
+windowrule = noanim, class:flameshot
+
+# Pwvucontrol #
+windowrule = float, class:com.saivert.pwvucontrol
+windowrule = center, class:com.saivert.pwvucontrol
+windowrule = size 1280 720, class:com.saivert.pwvucontrol
+
+# Nemo #
+windowrule = float, class:nemo
+windowrule = center, class:nemo
+windowrule = size 1280 720, class:nemo

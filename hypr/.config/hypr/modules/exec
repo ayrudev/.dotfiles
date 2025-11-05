@@ -1,0 +1,5 @@
+exec-once = swww-daemon
+exec-once = systemctl --user start hyprpolkitagent
+exec-once = waybar
+exec = gsettings set org.gnome.desktop.interface gtk-theme 'TokyoNight-Dark'
+exec = gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"

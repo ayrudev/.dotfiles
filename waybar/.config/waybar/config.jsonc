@@ -1,0 +1,56 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": "50",
+	"width": "2560",
+	"modules-left": [
+		"hyprland/workspaces",
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"tray",
+		"wireplumber",
+	],
+	"margin": "",
+	"spacing": "4",
+	"reload_style_on_change": true,
+
+	"hyprland/workspaces": {
+		"persistent-workspaces": {
+			"*": 5,
+		},
+		"format": "{icon}",
+		"format-icons": {
+			"active": "",
+			"empty": "",
+			"persistent": "",
+		},
+	},
+	
+	"clock": {
+		"format-alt": "{:%a, %d. %b  %H:%M}",
+		"tooltip": false
+	},
+
+	"tray": {
+	    "icon-size": 21,
+	    "spacing": 10,
+	    "icons": {
+	    	"steam": "/usr/share/icons/Papirus/128x128/apps/steam.svg",
+	    	"flameshot": "/usr/share/icons/Papirus/128x128/apps/flameshot.svg",
+	    	"qBittorrent": "/usr/share/icons/Papirus/128x128/apps/qbittorrent.svg",
+	    }
+	},
+	"wireplumber": {
+	"format": "{volume}% {icon}",
+    "format-icons": {
+        	"default": ["", "", ""]
+    	},
+    "format-muted": "",
+    "max-volume": 150,
+    "scroll-step": 0.5,
+	"on-click": "flatpak run com.saivert.pwvucontrol"
+    },
+}

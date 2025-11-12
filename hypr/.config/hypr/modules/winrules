@@ -33,3 +33,8 @@ windowrule = size 1280 720, class:com.saivert.pwvucontrol
 windowrule = float, class:nemo
 windowrule = center, class:nemo
 windowrule = size 1280 720, class:nemo
+
+# FileRoller #
+windowrule = float, class:org.gnome.FileRoller
+windowrule = center, class:org.gnome.FileRoller
+windowrule = size 1280 720, class:org.gnome.FileRoller

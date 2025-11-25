@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = main
+[user]
+	signingkey = 0xFB54A182B3378047
+	email = dev@ayru.dev
+	name = Ayru
+[commit]
+	gpgSign = true

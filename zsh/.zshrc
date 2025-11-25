@@ -18,4 +18,4 @@ source ~/.config/zsh/envs
 source ~/.config/zsh/gnupg
 source ~/.config/zsh/hist
 source ~/.config/zsh/keybinds
-
+source ~/.config/zsh/plugins

@@ -1,1 +1,2 @@
+export BROWSER=zen
 export EDITOR=nvim

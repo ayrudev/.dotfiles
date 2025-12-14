@@ -1,0 +1,10 @@
+# Steam #
+windowrule = float, class:steam, title:Friends List
+windowrule = center 1, class:steam, title:Friends List
+windowrule = float, class:steam, title:Steam Settings
+windowrule = center, class:steam, title:Steam Settings
+
+# Nemo #
+windowrule = float, class:nemo
+windowrule = center, class:nemo
+windowrule = size 1280 720, class:nemo

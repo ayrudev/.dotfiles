@@ -30,7 +30,7 @@ blocks:
       - type: git
         style: plain
         template:
-          " {{.Upstream}} {{if or (.Working.Changed) (.Staging.Changed) (.Ahead) (.behind)}}[\
+          " {{.HEAD}} {{if or (.Working.Changed) (.Staging.Changed) (.Ahead) (.behind)}}[\
           {{if gt .PushAhead 0}}\uf106{{end}}\
           {{if gt .PushBehind 0}}\uf107{{end}}\
           {{if .Staging.Changed}}\uf42e{{end}}\

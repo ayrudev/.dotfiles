@@ -29,10 +29,21 @@ blocks:
 
       - type: git
         style: plain
-        template: " {{.HEAD}} {{if or (.Working.Changed) (.Staging.Changed)}}[{{if .Staging.Changed}}\uf42e{{end}}{{if gt .Working.Unmerged 0}}\u21AF{{end}}{{if gt .Working.Deleted 0}}x{{end}}{{if gt .Working.Added 0}}+{{end}}{{if gt .Working.Modified 0}}!{{end}}{{if gt .Working.Untracked 0}}?{{end}}{{if gt .Ahead 0}}\uf106{{end}}{{if gt .Behind 0}}\uf107{{end}}]{{end}}"
+        template:
+          " {{.Upstream}} {{if or (.Working.Changed) (.Staging.Changed) (.Ahead) (.behind)}}[\
+          {{if gt .PushAhead 0}}\uf106{{end}}\
+          {{if gt .PushBehind 0}}\uf107{{end}}\
+          {{if .Staging.Changed}}\uf42e{{end}}\
+          {{if gt .Working.Unmerged 0}}\u21AF{{end}}\
+          {{if gt .Working.Deleted 0}}x{{end}}\
+          {{if gt .Working.Added 0}}+{{end}}\
+          {{if gt .Working.Modified 0}}!{{end}}\
+          {{if gt .Working.Untracked 0}}?{{end}}\
+          ]{{end}}"
         background: transparent
         options:
           fetch_status: true
+          fetch_push_status: true
           fetch_upstream_icon: true
           branch_icon: "\ue725 "
 

@@ -64,3 +64,14 @@ blocks:
         foreground_templates:
           - "{{if gt .Code 0}}red{{end}}"
           - "{{if eq .Code 0}}magenta{{end}}"
+  - type: rprompt
+    alignment: right
+    newline: false
+    segments:
+      - type: executiontime
+        style: plain
+        template: "{{.FormattedMs}}"
+        background: transparent
+        foreground: yellow
+        options:
+          style: austin

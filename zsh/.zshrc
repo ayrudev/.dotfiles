@@ -1,4 +1,4 @@
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/omp.toml)"
+eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/omp.yaml)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 

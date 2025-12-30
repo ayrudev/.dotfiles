@@ -1,5 +1,2 @@
-alias ls='eza -lah --icons=auto --no-permissions --git --no-filesize --no-user --group-directories-first --grid'
+alias ls='eza -lah --group-directories-first --git --icons=auto'
 alias unstow='stow -D'
-alias c=clear
-alias n=nvim
-alias q=exit

@@ -1,3 +1,5 @@
+zinit light olets/zsh-abbr
+zinit light olets/zsh-autosuggestions-abbreviations-strategy
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zdharma-continuum/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions

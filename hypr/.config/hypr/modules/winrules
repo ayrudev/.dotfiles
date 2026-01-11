@@ -1,10 +1,13 @@
+# Floating #
+windowrule = match:float on, border_size 0
+
 # Steam #
-windowrule = float, class:steam, title:Friends List
-windowrule = center 1, class:steam, title:Friends List
-windowrule = float, class:steam, title:Steam Settings
-windowrule = center, class:steam, title:Steam Settings
+windowrule = match:class steam, match:title Friends List, float on
+windowrule = match:class steam, match:title Friends List, center on
+windowrule = match:class steam, match:title Steam Settings, float on
+windowrule = match:class steam, match:title Steam Settings, center on
 
 # Nemo #
-windowrule = float, class:nemo
-windowrule = center, class:nemo
-windowrule = size 1280 720, class:nemo
+windowrule = match:class nemo, float on
+windowrule = match:class nemo, center on
+windowrule = match:class nemo, size 1280 720

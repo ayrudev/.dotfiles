@@ -21,7 +21,7 @@ bind = SUPER, right, movefocus, r
 bind = SUPER, up, movefocus, u
 bind = SUPER, down, movefocus, d
 
-bind = SUPER SHIFT, D, exec, hyprctl dispatch dpms && hyprlock
+bind = SUPER SHIFT, D, exec, hyprctl dispatch dpms
 bind = SUPER, RETURN, exec, $terminal
 bind = SUPER, A, exec, pkill fuzzel || fuzzel
 bind = SUPER, B, exec, $browser

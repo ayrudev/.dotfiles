@@ -1,6 +1,3 @@
-# Floating #
-windowrule = match:float on, border_size 0
-
 # Steam #
 windowrule = match:class steam, match:title Friends List, float on
 windowrule = match:class steam, match:title Friends List, center on
@@ -10,4 +7,9 @@ windowrule = match:class steam, match:title Steam Settings, center on
 # Nemo #
 windowrule = match:class nemo, float on
 windowrule = match:class nemo, center on
-windowrule = match:class nemo, size 1280 720
+windowrule = match:class nemo, size 1600 900
+
+# FileRoller #
+windowrule = match:class org.gnome.FileRoller, float on
+windowrule = match:class org.gnome.FileRoller, center on
+windowrule = match:class org.gnome.FileRoller, size 1024 576

@@ -28,6 +28,7 @@ bind = SUPER, B, exec, $browser
 bind = SUPER, D, exec, vesktop
 bind = SUPER, E, exec, $fileManager
 bind = SUPER, L, exec, hyprlock
+bind = , Print, exec, grim -g "$(slurp -o -c -d '##ffffffff' -w 3)" - | satty --filename - --output-filename ~/Pictures/Screenshots/$(date '+%d%m%Y-%H:%M:%S').png
 
 bind = SUPER, S, togglespecialworkspace, magic
 bind = SUPER, 1, workspace, 1

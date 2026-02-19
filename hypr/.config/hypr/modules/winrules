@@ -13,3 +13,11 @@ windowrule = match:class nemo, size 1600 900
 windowrule = match:class org.gnome.FileRoller, float on
 windowrule = match:class org.gnome.FileRoller, center on
 windowrule = match:class org.gnome.FileRoller, size 1024 576
+
+# Pwvucontrol #
+windowrule = match:class com.saivert.pwvucontrol, float on
+windowrule = match:class com.saivert.pwvucontrol, center on
+windowrule = match:class com.saivert.pwvucontrol, size 1024 576
+
+# Slurp #
+layerrule = match:namespace selection, animation fade

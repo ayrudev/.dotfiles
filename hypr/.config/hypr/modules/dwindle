@@ -2,3 +2,7 @@ dwindle {
     pseudotile = true
     preserve_split = true
 }
+
+bind = SUPER, W, layoutmsg, swapsplit
+bind = SUPER SHIFT, W, layoutmsg, togglesplit
+

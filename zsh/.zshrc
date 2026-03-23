@@ -1,21 +1,16 @@
-eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/omp.yaml)"
+eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-
-if [ ! -d "$ZINIT_HOME" ]; then
-	mkdir -p "$(dirname $ZINIT_HOME)"
-	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-fi
-
-source "$ZINIT_HOME/zinit.zsh"
+source /usr/share/zsh-antidote/antidote.zsh
+antidote load ~/.config/zsh/plugins.zsh ~/.config/zsh/plugins.zsh.static
 
 # Load modules
-source ~/.config/zsh/aliases
-source ~/.config/zsh/completions
-source ~/.config/zsh/envs
-source ~/.config/zsh/gnupg
-source ~/.config/zsh/hist
-source ~/.config/zsh/keybinds
-source ~/.config/zsh/plugins
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/completions.zsh
+source ~/.config/zsh/enviroment.zsh
+source ~/.config/zsh/gnupg.zsh
+source ~/.config/zsh/history.zsh
+source ~/.config/zsh/keybinds.zsh
+
+

@@ -18,11 +18,12 @@ bind = SUPER, down, movefocus, d
 bind = SUPER, A, exec, pkill rofi || rofi -show drun
 bind = SUPER, RETURN, exec, kitty
 bind = SUPER, B, exec, zen-browser
+bind = SUPER, C, exec, code
 bind = SUPER, D, exec, vesktop
 bind = SUPER, E, exec, nemo
-bind = SUPER ALT, D, exec, hyprctl dispatch dpms
+bind = SUPER SHIFT, D, exec, hyprctl dispatch dpms
 
-bind = SUPER SHIFT, D, exec, ~/.dotfiles/scripts/toggle_dark.sh
+bind = SUPER ALT, D, exec, ~/.dotfiles/scripts/toggle_dark.sh
 
 bind = , XF86AudioRaiseVolume, exec, pamixer -i 5 --set-limit 150 --allow-boost
 bind = , XF86AudioLowerVolume, exec, pamixer -d 5 --allow-boost

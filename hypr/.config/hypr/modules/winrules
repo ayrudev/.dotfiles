@@ -7,7 +7,7 @@ windowrule = match:class steam, match:title Steam Settings, center on
 # Nemo #
 windowrule = match:class nemo, float on
 windowrule = match:class nemo, center on
-windowrule = match:class nemo, size 1600 900
+windowrule = match:class nemo, size 1024 576
 
 # FileRoller #
 windowrule = match:class org.gnome.FileRoller, float on
@@ -19,5 +19,3 @@ windowrule = match:class com.saivert.pwvucontrol, float on
 windowrule = match:class com.saivert.pwvucontrol, center on
 windowrule = match:class com.saivert.pwvucontrol, size 1024 576
 
-# Slurp #
-layerrule = match:namespace selection, animation fade

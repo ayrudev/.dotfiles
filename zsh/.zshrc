@@ -19,13 +19,6 @@ if [[ ! -f "$ZSH_CACHE/zoxide.zsh" ]]; then
 fi
 source "$ZSH_CACHE/zoxide.zsh"
 
-source /usr/share/zsh-antidote/antidote.zsh
-# Only bundle if the static file is missing or the plugin list is newer
-if [[ ! -f ~/.config/zsh/plugins.static.zsh || ~/.config/zsh/plugins.zsh -nt ~/.config/zsh/plugins.static.zsh ]]; then
-  antidote bundle < ~/.config/zsh/plugins.zsh > ~/.config/zsh/plugins.static.zsh
-fi
-source ~/.config/zsh/plugins.static.zsh
-
 # Load modules
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/completions.zsh
@@ -34,4 +27,11 @@ source ~/.config/zsh/gnupg.zsh
 source ~/.config/zsh/history.zsh
 source ~/.config/zsh/keybinds.zsh
 
+source /usr/share/zsh-antidote/antidote.zsh
+# Only bundle if the static file is missing or the plugin list is newer
+if [[ ! -f ~/.config/zsh/plugins.static.zsh || ~/.config/zsh/plugins.zsh -nt ~/.config/zsh/plugins.static.zsh ]]; then
+  antidote bundle < ~/.config/zsh/plugins.zsh > ~/.config/zsh/plugins.static.zsh
+fi
+source ~/.config/zsh/plugins.static.zsh
 
+abbr load

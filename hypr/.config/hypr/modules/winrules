@@ -7,7 +7,7 @@ windowrule = match:class steam, match:title Steam Settings, center on
 # Nemo #
 windowrule = match:class nemo, float on
 windowrule = match:class nemo, center on
-windowrule = match:class nemo, size 1024 576
+windowrule = match:class nemo, size 1280 720
 
 # FileRoller #
 windowrule = match:class org.gnome.FileRoller, float on
@@ -18,4 +18,10 @@ windowrule = match:class org.gnome.FileRoller, size 1024 576
 windowrule = match:class com.saivert.pwvucontrol, float on
 windowrule = match:class com.saivert.pwvucontrol, center on
 windowrule = match:class com.saivert.pwvucontrol, size 1024 576
+
+# Impala #
+windowrule = match:class ^(impala|bluetui)$, float on
+windowrule = match:class ^(impala|bluetui)$, center on
+windowrule = match:class ^(impala|bluetui)$, size 854 480
+
 

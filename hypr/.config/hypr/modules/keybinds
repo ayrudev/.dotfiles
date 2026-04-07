@@ -28,6 +28,7 @@ bind = SUPER, A, exec, pkill fuzzel || fuzzel
 bind = SUPER, B, exec, $browser
 bind = SUPER, D, exec, vesktop
 bind = SUPER, E, exec, $fileManager
+bind = SUPER, L, exec, hyprlock
 
 bind = SUPER, S, togglespecialworkspace, magic
 bind = SUPER, 1, workspace, 1

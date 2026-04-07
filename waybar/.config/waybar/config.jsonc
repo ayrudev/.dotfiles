@@ -53,7 +53,7 @@
 		"format-off": "󰂲",
 		"format-on": "󰂯",
 		"format-connected": "󰂯",
-		"on-click": "kitty --class bluetui bluetui",
+		"on-click": "kitty -o confirm_os_window_close=0 --class bluetui bluetui",
 		"tooltip-format-connected": "{device_enumerate}",
 		"tooltip-format-enumerate-connected": "{device_alias}",
 		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%"
@@ -74,7 +74,7 @@
 		"tooltip-format-wifi": "{essid} ({signalStrength}%)",
 		"tooltip-format-ethernet": "{ifname}",
 
-		"on-click": "kitty --class impala impala",
+		"on-click": "kitty -o confirm_os_window_close=0 --class impala impala",
 		"max-length": 50
 	},
 	
@@ -85,11 +85,13 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{capacity}% {icon}",
+		"format": "{icon}",
+		"tooltip-format":"{capacity}%\n{timeTo}",
 		"format-icons": {
 			"default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
 			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-			"plugged": [""]
+			"plugged": [""],
+			"full": ["󱉝"]
 		}
 	}
 }

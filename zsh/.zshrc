@@ -27,11 +27,29 @@ source ~/.config/zsh/gnupg.zsh
 source ~/.config/zsh/history.zsh
 source ~/.config/zsh/keybinds.zsh
 
+# --- Antidote Plugin Management ---
 source /usr/share/zsh-antidote/antidote.zsh
-# Only bundle if the static file is missing or the plugin list is newer
-if [[ ! -f ~/.config/zsh/plugins.static.zsh || ~/.config/zsh/plugins.zsh -nt ~/.config/zsh/plugins.static.zsh ]]; then
-  antidote bundle < ~/.config/zsh/plugins.zsh > ~/.config/zsh/plugins.static.zsh
+
+# Paths for Antidote logic
+_antidote_plugins_txt="$HOME/.config/zsh/plugins.zsh"
+_antidote_plugins_static="$HOME/.config/zsh/plugins.static.zsh"
+_antidote_cache_dir="$HOME/.cache/antidote"
+
+# Re-bundle if:
+# 1. The static file is missing
+# 2. The source .txt file is newer than the static file
+# 3. The actual plugin cache directory is missing/empty
+if [[ ! -f "$_antidote_plugins_static" || \
+      "$_antidote_plugins_txt" -nt "$_antidote_plugins_static" || \
+      ! -d "$_antidote_cache_dir" ]]; then
+  
+  # Ensure the directory exists so antidote has a place to download plugins
+  mkdir -p "$_antidote_cache_dir"
+  
+  # Re-generate the static file and download missing plugins
+  antidote bundle < "$_antidote_plugins_txt" > "$_antidote_plugins_static"
 fi
-source ~/.config/zsh/plugins.static.zsh
+
+source "$_antidote_plugins_static"
 
 abbr load

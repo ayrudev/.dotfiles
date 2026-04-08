@@ -1,97 +1,96 @@
 {
-	"layer": "top",
-	"position": "top",
-	"height": "50",
-	"width": "2560",
-	"modules-left": ["hyprland/workspaces"],
-	"modules-center": ["clock"],
-	"modules-right": ["tray", "wireplumber", "bluetooth", "network", "battery"],
-	"margin": "",
-	"spacing": "4",
-	"reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "height": "50",
+  "width": "2560",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["tray", "wireplumber", "bluetooth", "network", "battery"],
+  "margin": "",
+  "spacing": "4",
+  "reload_style_on_change": true,
 
-	"hyprland/workspaces": {
-		"persistent-workspaces": {
-			"*": 5
-		},
-		"format": "{icon}",
-		"format-icons": {
-			"active": "",
-			"empty": "",
-			"persistent": ""
-		}
-	},
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 5,
+    },
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "empty": "",
+      "persistent": "",
+    },
+  },
 
-	"clock": {
-		"format-alt": "{:%a, %d. %b  %H:%M}",
-		"tooltip": false
-	},
+  "clock": {
+    "format-alt": "{:%a, %d. %b  %H:%M}",
+    "tooltip": false,
+  },
 
-	"tray": {
-		"icon-size": 21,
-		"spacing": 10,
-		"icons": {
-			"steam": "/usr/share/icons/Papirus/128x128/apps/steam.svg"
-		}
-	},
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "icons": {
+      "steam": "/usr/share/icons/Papirus/128x128/apps/steam.svg",
+    },
+  },
 
-	"wireplumber": {
-		"format": "{volume}% {icon}",
-		"format-icons": {
-			"default": ["", "", ""]
-		},
-		"format-muted": "",
-		"max-volume": 150,
-		"scroll-step": 1,
-		"reverse-scrolling": true,
-		"on-click": "flatpak run com.saivert.pwvucontrol"
-	},
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-icons": {
+      "default": ["", "", ""],
+    },
+    "format-muted": "",
+    "max-volume": 150,
+    "scroll-step": 1,
+    "reverse-scrolling": true,
+    "on-click": "flatpak run com.saivert.pwvucontrol",
+  },
 
-	"bluetooth": {
-		"controller": "hci0",
-		"format-no-controller": "",
-		"format-off": "󰂲",
-		"format-on": "󰂯",
-		"format-connected": "󰂯",
-		"on-click": "kitty -o confirm_os_window_close=0 --class bluetui bluetui",
-		"tooltip-format-connected": "{device_enumerate}",
-		"tooltip-format-enumerate-connected": "{device_alias}",
-		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%"
-	},
+  "bluetooth": {
+    "controller": "hci0",
+    "format-no-controller": "",
+    "format-off": "󰂲",
+    "format-on": "󰂯",
+    "format-connected": "󰂱",
+    "on-click": "kitty -o confirm_os_window_close=0 --class bluetui bluetui",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%",
+  },
 
-	"network": {
-		"interface": "wlan0",
-		"format": "",
-		"format-disconnected": "󰤭",
-		"format-disabled": "",
-		"format-wifi": "{icon}",
-		"format-icons": {
-			"default": ["󰤯","󰤟","󰤢","󰤥","󰤨"]
-		},
-		"format-ethernet": "",
+  "network": {
+    "format": "",
+    "format-disconnected": "󰤭",
+    "format-disabled": "",
+    "format-wifi": "{icon}",
+    "format-icons": {
+      "default": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    },
+    "format-ethernet": "",
 
-		"tooltip-format": "",
-		"tooltip-format-wifi": "{essid} ({signalStrength}%)",
-		"tooltip-format-ethernet": "{ifname}",
+    "tooltip-format": "",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ifname}",
 
-		"on-click": "kitty -o confirm_os_window_close=0 --class impala impala",
-		"max-length": 50
-	},
-	
-	"battery": {
-		"bat": "BAT1",
-		"interval": 60,
-		"states": {
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{icon}",
-		"tooltip-format":"{capacity}%\n{timeTo}",
-		"format-icons": {
-			"default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-			"charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
-			"plugged": [""],
-			"full": ["󱉝"]
-		}
-	}
+    "on-click": "kitty -o confirm_os_window_close=0 --class impala impala",
+    "max-length": 50,
+  },
+
+  "battery": {
+    "bat": "BAT1",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{icon}",
+    "tooltip-format": "{capacity}%\n{timeTo}",
+    "format-icons": {
+      "default": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "plugged": [""],
+      "full": ["󱉝"],
+    },
+  },
 }

@@ -19,9 +19,12 @@ windowrule = match:class com.saivert.pwvucontrol, float on
 windowrule = match:class com.saivert.pwvucontrol, center on
 windowrule = match:class com.saivert.pwvucontrol, size 1024 576
 
-# Impala #
+# impala|bluetui #
 windowrule = match:class ^(impala|bluetui)$, float on
 windowrule = match:class ^(impala|bluetui)$, center on
 windowrule = match:class ^(impala|bluetui)$, size 854 480
 
-
+# File Picker #
+windowrule = match:class ^(xdg-desktop-portal-gtk)$, float on
+windowrule = match:class ^(xdg-desktop-portal-gtk)$, center on
+windowrule = match:class ^(xdg-desktop-portal-gtk)$, size 854 480

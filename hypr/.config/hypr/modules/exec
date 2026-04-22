@@ -3,3 +3,4 @@ exec-once = waybar
 exec-once = systemctl --user start hyprpolkitagent
 exec-once = systemctl --user enable --now hypridle.service
 exec-once = mpris-proxy
+exec-once = wl-paste -w cliphist store

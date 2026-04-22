@@ -26,11 +26,12 @@ bind = SUPER ALT, T, exec, ~/.dotfiles/scripts/toggle_dark.sh
 bind = SUPER, RETURN, exec, $terminal
 bind = SUPER, A, exec, pkill rofi || rofi -show drun
 bind = SUPER, B, exec, $browser
+bind = SUPER, C, exec, code
 bind = SUPER, D, exec, vesktop
 bind = SUPER, E, exec, $fileManager
 bind = SUPER, L, exec, hyprlock
 
-bind = SUPER, S, togglespecialworkspace, magic
+bind = SUPER, S, togglespecialworkspace, special
 bind = SUPER, 1, workspace, 1
 bind = SUPER, 2, workspace, 2
 bind = SUPER, 3, workspace, 3
@@ -42,7 +43,7 @@ bind = SUPER, 8, workspace, 8
 bind = SUPER, 9, workspace, 9
 bind = SUPER, 0, workspace, 10
 
-bind = SUPER SHIFT, S, movetoworkspacesilent, special:magic
+bind = SUPER SHIFT, S, movetoworkspacesilent, special:special
 bind = SUPER SHIFT, 1, movetoworkspacesilent, 1
 bind = SUPER SHIFT, 2, movetoworkspacesilent, 2
 bind = SUPER SHIFT, 3, movetoworkspacesilent, 3

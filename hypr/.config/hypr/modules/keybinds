@@ -13,8 +13,8 @@ bind = SUPER SHIFT, P, centerwindow
 bind = SUPER, F, togglefloating
 bind = SUPER SHIFT, F, fullscreen
 
-bind = SUPER, W, layoutmsg, swapsplit
-bind = SUPER SHIFT, W, layoutmsg, togglesplit
+bind = SUPER ALT, W, layoutmsg, swapsplit
+bind = SUPER ALT SHIFT, W, layoutmsg, togglesplit
 bind = SUPER, left, movefocus, l
 bind = SUPER, right, movefocus, r
 bind = SUPER, up, movefocus, u
@@ -30,6 +30,8 @@ bind = SUPER, C, exec, code
 bind = SUPER, D, exec, vesktop
 bind = SUPER, E, exec, $fileManager
 bind = SUPER, L, exec, hyprlock
+bind = SUPER SHIFT, W, exec, kitty -o confirm_os_window_close=0 --class impala impala
+bind = SUPER SHIFT, B, exec, kitty -o confirm_os_window_close=0 --class bluetui bluetui
 
 bind = SUPER, S, togglespecialworkspace, special
 bind = SUPER, 1, workspace, 1

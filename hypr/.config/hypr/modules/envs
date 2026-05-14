@@ -6,8 +6,7 @@ env = XDG_SESSION_DESKTOP,Hyprland
 # --- Multi-GPU & Hardware Acceleration ---
 # Primary: Intel (iHD), Secondary: NVIDIA (920MX)
 #env = AQ_DRM_DEVICES,/dev/dri/by-name/intel:/dev/dri/by-name/nvidia
-env = LIBVA_DRIVER_NAME,iHD
-env = GBM_BACKEND,nvidia-drm
+#env = LIBVA_DRIVER_NAME,iHD
 
 # --- Toolkit Backends (Wayland first, fallback to X11) ---
 env = GDK_BACKEND,wayland,x11

@@ -1,0 +1,5 @@
+terminal = "kitty"
+browser = "zen-browser"
+discord = "vesktop"
+fileManager = "nemo"
+lockscreen = "hyprlock"

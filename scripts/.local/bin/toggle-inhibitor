@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Identifier for finding the running inhibitor process
+ID="custom-sleep-inhibitor"
+PID_FILE="/tmp/sleep_inhibitor.pid"
+
+if [ -f "$PID_FILE" ] && kill -0 $(cat "$PID_FILE") 2>/dev/null; then
+    # If already running, kill it to remove the inhibition locks
+    kill $(cat "$PID_FILE")
+    rm -f "$PID_FILE"
+    notify-send "Sleep Inhibitor" "Disabled: Normal power saving & lid switch restored" -u normal
+else
+    # Start systemd-inhibit in the background blocking sleep, idle, locking, and lid switch
+    # We use 'sleep infinity' as the dummy process to keep the lock alive.
+    systemd-inhibit \
+        --what=sleep:idle:handle-lid-switch \
+        --who="$ID" \
+        --why="User toggled via keybind" \
+        sleep infinity &
+    
+    echo $! > "$PID_FILE"
+    notify-send "Sleep Inhibitor" "Enabled: Suspend, lock, and lid switch blocked" -u normal
+fi

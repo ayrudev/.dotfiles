@@ -22,6 +22,7 @@ return {
         "clangd",
         "cssls",
         "html",
+        "jdtls",
         "jsonls",
         "lua_ls",
         "pyright",

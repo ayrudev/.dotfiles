@@ -12,10 +12,8 @@ keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Clear search highl
 
 keymap.set("n", "[b", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
 keymap.set("n", "]b", "<cmd>bnext<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<leader>q", function()
-  local current_buf = vim.api.nvim_get_current_buf()
-  vim.cmd("bnext")
-  vim.cmd("bdelete " .. current_buf)
-end, { desc = "Close buffer and go to next" })
+vim.keymap.set("n", "<leader>bd", function()
+  require("bufdelete").bufdelete(0, true)
+end)
 
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })

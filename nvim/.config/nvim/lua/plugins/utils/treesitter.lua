@@ -14,6 +14,7 @@ return {
       "gitignore",
       "git_config",
       "html",
+      "java",
       "javascript",
       "json",
       "lua",

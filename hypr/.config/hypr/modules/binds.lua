@@ -2,16 +2,16 @@ require("modules/apps")
 local mainMod = "SUPER"
 
 hl.bind(
-    mainMod .. " + SHIFT + M",
-    hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
+  mainMod .. " + SHIFT + M",
+  hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(Terminal))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("pkill rofi || rofi -show drun"))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(discord))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockscreen))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(Browser))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(Discord))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(FileManager))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(Lockscreen))
 hl.bind(mainMod .. " + F12", hl.dsp.exec_cmd("~/.local/bin/toggle-inhibitor"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("kitty -o confirm_os_window_close=0 --class bluetui bluetui"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("kitty -o confirm_os_window_close=0 --class impala impala"))
@@ -46,25 +46,25 @@ hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic", follow = false }))
 
 for i = 1, 10 do
-    local key = i % 10
-    hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
-    hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i, follow = false }))
+  local key = i % 10
+  hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
+  hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i, follow = false }))
 end
 
 hl.bind(
-    "XF86AudioMute",
-    hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
-    { locked = true, repeating = true }
+  "XF86AudioMute",
+  hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),
+  { locked = true, repeating = true }
 )
 hl.bind(
-    "XF86AudioRaiseVolume",
-    hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
-    { locked = true, repeating = true }
+  "XF86AudioRaiseVolume",
+  hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
+  { locked = true, repeating = true }
 )
 hl.bind(
-    "XF86AudioLowerVolume",
-    hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"),
-    { locked = true, repeating = true }
+  "XF86AudioLowerVolume",
+  hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"),
+  { locked = true, repeating = true }
 )
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -q -n1 set 10%+"), { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -q -n1 set 10%-"), { locked = true, repeating = true })

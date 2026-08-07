@@ -15,5 +15,3 @@ keymap.set("n", "]b", "<cmd>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bd", function()
   require("bufdelete").bufdelete(0, true)
 end)
-
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })

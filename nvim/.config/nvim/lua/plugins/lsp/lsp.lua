@@ -18,7 +18,6 @@ return {
     require("mason").setup()
     require("mason-lspconfig").setup({
       ensure_installed = {
-        "bashls",
         "clangd",
         "cssls",
         "html",
@@ -50,11 +49,6 @@ return {
         vim.keymap.set("n", "gi", function()
           vim.lsp.buf.implementation()
         end, opts)
-
-        -- opts.desc = "LSP: Code action"
-        -- vim.keymap.set("n", "<leader>ca", function()
-        --     vim.lsp.buf.code_action()
-        -- end, opts)
 
         opts.desc = "LSP: Rename symbol"
         vim.keymap.set("n", "<leader>rn", function()

@@ -8,8 +8,6 @@ return {
       python = { "ruff" },
       javascript = { "eslint_d" },
       typescript = { "eslint_d" },
-      bash = { "shellcheck" },
-      zsh = { "shellcheck" },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("nvim-lint", { clear = true })
@@ -18,16 +16,6 @@ return {
       callback = function()
         lint.try_lint()
       end,
-    })
-    require("mason-tool-installer").setup({
-      ensure_installed = {
-        -- Linters
-        "ruff",
-        "eslint_d",
-        "shellcheck",
-      },
-      auto_update = false,
-      run_on_start = true,
     })
   end,
 }

@@ -6,12 +6,11 @@ return {
     "MunifTanjim/nui.nvim",
     "nvim-tree/nvim-web-devicons",
   },
-
   lazy = false,
   config = function()
-    vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
-    vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
-    vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
+    vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
+    vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
+    vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
     vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
 
     require("neo-tree").setup({
@@ -24,14 +23,14 @@ return {
         git_status = {
           symbols = {
             added = "✚",
-            modified = "",
+            modified = "",
             deleted = "✖",
             renamed = "󰁕",
-            untracked = "",
-            ignored = "",
+            untracked = "",
+            ignored = "",
             unstaged = "󰄱",
-            staged = "",
-            conflict = "",
+            staged = "",
+            conflict = "",
           },
         },
       },
@@ -47,9 +46,8 @@ return {
         },
         use_libuv_file_watcher = true, -- Automatically update the tree when files change on disk
       },
-
       window = {
-        position = "right",
+        position = "left",
         width = 35,
         mappings = {
           -- Standard navigation
@@ -57,11 +55,9 @@ return {
           ["<cr>"] = "open",
           ["l"] = "open", -- Open directory or file using 'l'
           ["h"] = "close_node", -- Close directory using 'h'
-
           -- Splitting
           ["s"] = "open_split", -- Open file in horizontal split
           ["v"] = "open_vsplit", -- Open file in vertical split
-
           -- File Operations
           ["a"] = {
             "add",
@@ -76,7 +72,6 @@ return {
           ["p"] = "paste_from_clipboard",
           ["c"] = "copy", -- Prompts for a destination path
           ["m"] = "move", -- Prompts for a destination path
-
           -- Utilities
           ["q"] = "close_window",
           ["R"] = "refresh",
@@ -84,7 +79,6 @@ return {
         },
       },
     })
-
     -- Global keymaps to easily toggle and focus the tree
     vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle Neo-tree", silent = true })
     vim.keymap.set("n", "<leader>o", ":Neotree focus<CR>", { desc = "Focus Neo-tree", silent = true })

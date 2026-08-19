@@ -1,0 +1,3 @@
+abbr -g "s"="sudo"
+abbr -g "n"="nvim"
+abbr -g "se"="sudoedit"

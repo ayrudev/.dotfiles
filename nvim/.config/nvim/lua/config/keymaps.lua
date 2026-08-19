@@ -12,8 +12,11 @@ keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Clear search highl
 
 keymap.set("n", "[b", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
 keymap.set("n", "]b", "<cmd>bnext<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<leader>bd", function()
-  require("bufdelete").bufdelete(0, true)
-end)
 
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+
+-- Window navigation
+keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to left window" })
+keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
+keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
+keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })

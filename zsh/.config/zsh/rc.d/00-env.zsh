@@ -7,6 +7,3 @@ export EDITOR=nvim
 
 export PAGER="less"
 export LESS="-R"
-
-export BAT_THEME="TwoDark"
-export MANPAGER="bat -l man -p"

@@ -3,9 +3,11 @@ return {
   event = "VeryLazy",
   opts = {
     preset = "helix",
+    delay = 0,
     spec = {
       { "<leader>b", group = "[B]uffer" },
       { "<leader>c", group = "[C]ode" },
+      { "<leader>d", group = "[D]ebug" },
       { "<leader>f", group = "[F]iles" },
       { "<leader>s", group = "[S]earch & Replace" },
       { "<leader>g", group = "[G]it" },

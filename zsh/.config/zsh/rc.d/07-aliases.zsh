@@ -1,6 +1,6 @@
 alias ls='eza'
-alias ll='eza -lh'
-alias la='eza -lha'
+alias ll='eza -lh --git'
+alias la='eza -lha --git'
 alias grep='grep --color=auto'
 
 alias rm='rm -i'

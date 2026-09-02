@@ -9,6 +9,7 @@ opt.scrolloff = 8 -- Keeps 8 lines above and below cursor at all times
 opt.cursorline = true -- Highlight current line
 opt.laststatus = 3 -- Use a single global statusline (fixes Neo-tree/Lualine clutter)
 opt.signcolumn = "yes" -- Always reserve space for signs (prevents text shifting when diagnostics/gitsigns appear)
+opt.guicursor = "n-v-c-sm:block,i-ci-ve:hor20,r-cr-o:hor20" -- Block cursor in normal mode, underline in insert mode
 
 -- Tabs & Indentation
 opt.tabstop = 2 -- Number of spaces tabs count for
@@ -28,6 +29,7 @@ opt.splitbelow = true -- Vertical splits below current
 opt.mouse = "a" -- Enable mouse support in all modes
 opt.undofile = true -- Save undo history to a file (persists across sessions)
 opt.updatetime = 250 -- Faster response time for CursorHold events (gitsigns, hover, etc.)
+opt.timeoutlen = 400 -- Max wait (ms) for a mapped key sequence like <leader>d before giving up
 -- opt.clipboard = "unnamedplus" -- Use the system clipboard for yank/paste
 
 vim.diagnostic.config({

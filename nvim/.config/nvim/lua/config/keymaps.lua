@@ -8,7 +8,7 @@ keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up and center" })
 keymap.set("n", "n", "nzzzv", { desc = "Next search result and center" })
 keymap.set("n", "N", "Nzzzv", { desc = "Previous search result and center" })
 
-keymap.set("n", "<leader>h", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
 
 keymap.set("n", "[b", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
 keymap.set("n", "]b", "<cmd>bnext<CR>", { desc = "Next buffer" })

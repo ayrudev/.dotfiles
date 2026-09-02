@@ -1,1 +1,6 @@
-*.static.zsh
+# TPM and all its cloned plugins self-heal via the `if` check
+tmux/.config/tmux/plugins/
+
+# antidote itself + its compiled bundle self-heal via the `if` check in 02-plugins.zsh
+zsh/.config/zsh/antidote/
+zsh/.config/zsh/plugins.zsh

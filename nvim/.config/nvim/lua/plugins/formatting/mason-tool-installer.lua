@@ -15,6 +15,10 @@ return {
 
         -- Linters
         "eslint_d",
+
+        -- Debug adapters
+        "debugpy",
+        "codelldb",
       },
       auto_update = false,
       run_on_start = true,

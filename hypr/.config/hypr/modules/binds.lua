@@ -51,6 +51,12 @@ for i = 1, 10 do
   hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i, follow = false }))
 end
 
+hl.define_submap("passthru", function()
+  hl.bind(mainMod .. " + ALT + F12", hl.dsp.submap("reset"), { description = "Re-enable host binds" })
+end)
+
+hl.bind(mainMod .. " + ALT + F12", hl.dsp.submap("passthru"), { description = "Send all keys to the VM" })
+
 hl.bind(
   "XF86AudioMute",
   hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"),

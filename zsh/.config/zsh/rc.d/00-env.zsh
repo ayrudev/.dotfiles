@@ -7,3 +7,5 @@ export EDITOR=nvim
 
 export PAGER="less"
 export LESS="-R"
+
+export LIBVIRT_DEFAULT_URI=qemu:///system

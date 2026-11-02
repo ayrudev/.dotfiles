@@ -7,7 +7,7 @@ fi
 
 source "$antidote_path"
 
-export ABBR_USER_ABBREVIATIONS_FILE="$ZDOTDIR/abbreviations"
+export ABBR_USER_ABBREVIATIONS_FILE="$ZDOTDIR/abbreviations.txt"
 antidote load "$ZDOTDIR/plugins.txt"
 
 zstyle ':fzf-tab:*' fzf-flags --height=40% --layout=reverse

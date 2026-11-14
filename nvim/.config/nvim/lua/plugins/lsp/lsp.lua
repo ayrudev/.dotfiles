@@ -14,6 +14,11 @@ return {
         },
       },
     })
+    vim.lsp.config("qmlls", {
+      cmd = { "/usr/bin/qmlls6" },
+      root_markers = { ".qmlls.ini", ".git" },
+    })
+    vim.lsp.enable("qmlls")
 
     require("mason").setup()
     require("mason-lspconfig").setup({

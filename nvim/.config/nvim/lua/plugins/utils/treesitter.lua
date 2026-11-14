@@ -21,6 +21,7 @@ return {
       "markdown",
       "markdown_inline",
       "python",
+      "qmljs",
       "query",
       "regex",
       "scss",
@@ -35,7 +36,7 @@ return {
     ts.install(languages)
 
     vim.api.nvim_create_autocmd("FileType", {
-      pattern = languages,
+      pattern = vim.list_extend(vim.deepcopy(languages), { "qml" }),
       callback = function()
         -- Turn on native Neovim treesitter highlighting
         vim.treesitter.start()

@@ -26,7 +26,7 @@ blocks:
         template: "{{.Path}}"
         background: transparent
         foreground: blue
-        properties: 
+        options:
           style: full
 
       - type: git

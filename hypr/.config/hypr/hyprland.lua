@@ -12,10 +12,10 @@ hl.config({
   general = {
     border_size = 2,
     gaps_in = 4,
-    gaps_out = 16,
+    gaps_out = 10,
     col = {
-      active_border = "rgba(FFFFFFFF)",
-      inactive_border = "rgba(595959aa)",
+      active_border = "rgba(c4b5fdff)",
+      inactive_border = "rgba(363641ff)",
     },
 
     resize_on_border = false,
@@ -23,7 +23,7 @@ hl.config({
   },
 
   decoration = {
-    rounding = 3,
+    rounding = 10,
     rounding_power = 2,
     dim_special = 0.5,
     blur = {

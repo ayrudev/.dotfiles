@@ -1,5 +1,6 @@
 require("modules/apps")
 local mainMod = "SUPER"
+local screenshot = "slurp | grim -g - - | wl-copy --type image/png"
 
 hl.bind(
   mainMod .. " + SHIFT + M",
@@ -15,6 +16,7 @@ hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(Lockscreen))
 hl.bind(mainMod .. " + F12", hl.dsp.exec_cmd("~/.local/bin/toggle-inhibitor"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("kitty -o confirm_os_window_close=0 --class bluetui bluetui"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("kitty -o confirm_os_window_close=0 --class impala impala"))
+hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd(screenshot))
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.kill())

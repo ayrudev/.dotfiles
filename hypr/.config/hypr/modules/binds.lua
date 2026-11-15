@@ -1,5 +1,14 @@
-require("modules/apps")
 local mainMod = "SUPER"
+
+local appLauncher = "pkill rofi || rofi -show drun"
+local terminal = "kitty"
+local browser = "zen-browser"
+local bluetoothSelector = "kitty -o confirm_os_window_close=0 --class bluetui bluetui"
+local wifiSelector = "kitty -o confirm_os_window_close=0 --class impala impala"
+local sleepInhibitor = "~/.local/bin/toggle-inhibitor"
+local discord = "vesktop"
+local fileManager = "nemo"
+local lockscreen = "hyprlock"
 local screenshot = "slurp | grim -g - - | wl-copy --type image/png"
 
 hl.bind(
@@ -7,15 +16,15 @@ hl.bind(
   hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(Terminal))
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("pkill rofi || rofi -show drun"))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(Browser))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(Discord))
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(FileManager))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(Lockscreen))
-hl.bind(mainMod .. " + F12", hl.dsp.exec_cmd("~/.local/bin/toggle-inhibitor"))
-hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("kitty -o confirm_os_window_close=0 --class bluetui bluetui"))
-hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("kitty -o confirm_os_window_close=0 --class impala impala"))
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(appLauncher))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(discord))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockscreen))
+hl.bind(mainMod .. " + F12", hl.dsp.exec_cmd(sleepInhibitor))
+hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(bluetoothSelector))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(wifiSelector))
 hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd(screenshot))
 
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
@@ -52,12 +61,6 @@ for i = 1, 10 do
   hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
   hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i, follow = false }))
 end
-
-hl.define_submap("passthru", function()
-  hl.bind(mainMod .. " + ALT + F12", hl.dsp.submap("reset"), { description = "Re-enable host binds" })
-end)
-
-hl.bind(mainMod .. " + ALT + F12", hl.dsp.submap("passthru"), { description = "Send all keys to the VM" })
 
 hl.bind(
   "XF86AudioMute",
